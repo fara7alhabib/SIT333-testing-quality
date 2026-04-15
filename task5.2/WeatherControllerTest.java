@@ -21,8 +21,8 @@ public class WeatherControllerTest {
         totalHours = wController.getTotalHours();
 
         temperatures = new double[totalHours];
-        minTemperature = 1000;
-        maxTemperature = -1000;
+        minTemperature = Double.MAX_VALUE;
+        maxTemperature = -Double.MAX_VALUE;
         double sum = 0;
 
         for (int i = 0; i < totalHours; i++) {
@@ -50,13 +50,19 @@ public class WeatherControllerTest {
 
     @Test
     public void testStudentIdentity() {
+        // Arrange
         String studentId = "223803449";
+
+        // Assert
         Assert.assertNotNull("Student ID is null", studentId);
     }
 
     @Test
     public void testStudentName() {
+        // Arrange
         String studentName = "Farah Mansour M Alhabib";
+
+        // Assert
         Assert.assertNotNull("Student name is null", studentName);
     }
 
@@ -87,10 +93,10 @@ public class WeatherControllerTest {
         Assert.assertEquals(avgTemperature, cachedAverage, 0.001);
     }
 
-    // Leave this commented for this task
     /*
     @Test
     public void testTemperaturePersist() {
+        // Not required for this task
     }
     */
 }
