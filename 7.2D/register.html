@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Page</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #dbeafe, #f3e8ff);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 400px;
+            margin: 80px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #444;
+        }
+
+        input[type="text"],
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            margin-bottom: 18px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #2563eb;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1d4ed8;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Create Account</h2>
+
+        <form action="http://localhost:8080/reg" method="post">
+
+            <label>First Name</label>
+            <input type="text" name="fname" placeholder="Enter first name">
+
+            <label>Last Name</label>
+            <input type="text" name="lname" placeholder="Enter last name">
+
+            <label>Email</label>
+            <input type="text" name="email" placeholder="Enter email address">
+
+            <label>Date of Birth</label>
+            <input type="date" name="dob">
+
+            <input type="submit" value="Register">
+
+        </form>
+
+        <div class="footer">
+            SIT333 Registration Testing Page
+        </div>
+    </div>
+
+</body>
+</html>
